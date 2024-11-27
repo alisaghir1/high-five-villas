@@ -46,14 +46,14 @@ import { PiChairThin } from "react-icons/pi";
 
 const FourthSection: React.FC = () => {
   return (
-    <div className='my-20 bg-white flex flex-col items-center justify-center gap-10 pb-8'>
+    <div className=' flex flex-col items-center justify-center gap-10 pb-20 bg-customBg'>
       <Image className='w-full h-screen object-cover' src={reef} alt="reef pic" />
       
       <div className="text-center mx-2">
-        <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white pb-4">
+        <h2 className="text-2xl font-bold text-white lg:text-3xl pb-4 mt-10 custom-font">
         WE PROVIDE EXCEPTIONAL VALUE
         </h2>
-        <p className="max-w-screen-sm text-gray-500 dark:text-gray-300 md:block mx-auto">
+        <p className="max-w-screen-sm text-customText2 md:block mx-auto mb-10 font-mono">
         by combining luxury, quality and affordability, ensuring our clients receive the best possible living experience for their investments.
         </p>
       </div>
@@ -78,163 +78,163 @@ const FourthSection: React.FC = () => {
           alt="reef pic 3" 
         />
       </div>
-      <div className="text-center mx-2">
-        <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white pb-4">
+      <div className="text-center mx-2 mt-10">
+        <h2 className="text-2xl font-bold text-white lg:text-3x pb-4 custom-font">
         COMMUNITY & AMINITIES
         </h2>
-        <p className="max-w-screen-sm text-gray-500 dark:text-gray-300 md:block mx-auto">
+        <p className="max-w-screen-sm text-customText2 md:block mx-auto font-mono ">
         We believe in creating vibrant and connected communities where people can thrive, enjoy their moments and benefit from a range of amenities that foster these connections.
         </p>
       </div>
-      <div className="my-10 p-4">
+      <div className="my-10 p-4 text-customText2 font-mono">
       {/* Grid container */}
       <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-20 lg:mx-20">
         {/* Icon 1 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-          <MdHolidayVillage className="fa fa-home text-7xl text-gray-700" />
+          <MdHolidayVillage className="fa fa-home text-7xl text-customText2" />
           <span>GUEST VILLA</span>
         </div>
 
         {/* Icon 2 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <IoFlowerSharp className="fa fa-home text-7xl text-gray-700" />
+        <IoFlowerSharp className="fa fa-home text-7xl text-customText2" />
           <span>PRIVATE GARDEN</span>
         </div>
 
         {/* Icon 3 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <MdEventSeat className="fa fa-home text-7xl text-gray-700" />
+        <MdEventSeat className="fa fa-home text-7xl text-customText2" />
           <span>SUNKEN SEATS</span>
         </div>
 
         {/* Icon 4 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GrYoga className="fa fa-home text-7xl text-gray-700" />
+        <GrYoga className="fa fa-home text-7xl text-customText2" />
           <span>YOGA AREAS</span>
         </div>
 
         {/* Icon 5 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GiFruitTree  className="fa fa-home text-7xl text-gray-700" />
+        <GiFruitTree  className="fa fa-home text-7xl text-customText2" />
           <span>VEGETABLE GARDEN</span>
         </div>
 
         {/* Icon 6 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
-        <MdElectricCar  className="fa fa-home text-7xl text-gray-700" />
+        <MdElectricCar  className="fa fa-home text-7xl text-customText2" />
           <span>ELECTRIC VEHICLE RECHARGE STATION</span>
         </div>
 
         {/* Icon 7 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GiRoundTable className="fa fa-home text-7xl text-gray-700" />
+        <GiRoundTable className="fa fa-home text-7xl text-customText2" />
           <span>CO-WORKING SPACE</span>
         </div>
 
         {/* Icon 8 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <TbMeat  className="fa fa-home text-7xl text-gray-700" />
+        <TbMeat  className="fa fa-home text-7xl text-customText2" />
           <span>4X BBQ AREA</span>
         </div>
 
         {/* Icon 9 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <MdOutlineSportsCricket className="fa fa-home text-7xl text-gray-700" />
+        <MdOutlineSportsCricket className="fa fa-home text-7xl text-customText2" />
           <span>CRICKET PITCH</span>
         </div>
 
         {/* Icon 10 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-          <MdSportsHockey className="fa fa-home text-7xl text-gray-700" />
+          <MdSportsHockey className="fa fa-home text-7xl text-customText2" />
           <span>CROSSFIT AREA</span>
         </div>
 
         {/* Icon 11 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-          <MdOutlineDeck className="fa fa-home text-7xl text-gray-700" />
+          <MdOutlineDeck className="fa fa-home text-7xl text-customText2" />
           <span>DECKING AREA</span>
         </div>
 
         {/* Icon 12 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <CgGym  className="fa fa-home text-7xl text-gray-700" />
+        <CgGym  className="fa fa-home text-7xl text-customText2" />
           <span>INDOOR GYM</span>
         </div>
 
         {/* Icon 13 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <RiBikeFill className="fa fa-home text-7xl text-gray-700" />
+        <RiBikeFill className="fa fa-home text-7xl text-customText2" />
           <span>AQUA BIKE</span>
         </div>
 
         {/* Icon 14 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-          <TbPool className="fa fa-home text-7xl text-gray-700" />
+          <TbPool className="fa fa-home text-7xl text-customText2" />
           <span>JACUZZI</span>
         </div>
 
         {/* Icon 15 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <FaPersonRunning className="fa fa-home text-7xl text-gray-700" />
+        <FaPersonRunning className="fa fa-home text-7xl text-customText2" />
           <span>JOGGING TRACK</span>
         </div>
 
         {/* Icon 16 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GiKidSlide  className="fa fa-home text-7xl text-gray-700" />
+        <GiKidSlide  className="fa fa-home text-7xl text-customText2" />
           <span>KIDS PLAY AREA</span>
         </div>
 
         {/* Icon 17 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GiTennisCourt className="fa fa-home text-7xl text-gray-700" />
+        <GiTennisCourt className="fa fa-home text-7xl text-customText2" />
           <span>MULTIPURPOSE COURT</span>
         </div>
 
         {/* Icon 18 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <PiProjectorScreenChartLight className="fa fa-home text-7xl text-gray-700" />
+        <PiProjectorScreenChartLight className="fa fa-home text-7xl text-customText2" />
           <span>ROOFTOP CINEMA</span>
         </div>
 
         {/* Icon 19 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GiWeightLiftingUp className="fa fa-home text-7xl text-gray-700" />
+        <GiWeightLiftingUp className="fa fa-home text-7xl text-customText2" />
           <span>OUTDOOR GYM</span>
         </div>
         {/* Icon 20 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <MdOutlinePool className="fa fa-home text-7xl text-gray-700" />
+        <MdOutlinePool className="fa fa-home text-7xl text-customText2" />
           <span>SWIMMING POOL</span>
         </div>
 
         {/* Icon 21 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <FaTableTennis className="fa fa-home text-7xl text-gray-700" />
+        <FaTableTennis className="fa fa-home text-7xl text-customText2" />
           <span>PICKLE BALL</span>
         </div>
 
         {/* Icon 22 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <MdOutlineLocalLaundryService className="fa fa-home text-7xl text-gray-700" />
+        <MdOutlineLocalLaundryService className="fa fa-home text-7xl text-customText2" />
           <span>HIGH-END LAUNDARY SERVICE</span>
         </div>
 
         {/* Icon 23 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-          <GrLounge className="fa fa-home text-7xl text-gray-700" />
+          <GrLounge className="fa fa-home text-7xl text-customText2" />
           <span>LOUNGE SEATING</span>
         </div>
 
         {/* Icon 24 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <GiWaterPolo className="fa fa-home text-7xl text-gray-700" />
+        <GiWaterPolo className="fa fa-home text-7xl text-customText2" />
           <span>EXERCISE POOL</span>
         </div>
 
         {/* Icon 25 */}
         <div className="flex flex-col justify-center items-center p-4 rounded-lg">
-        <PiChairThin className="fa fa-home text-7xl text-gray-700" />
+        <PiChairThin className="fa fa-home text-7xl text-customText2" />
           <span>SITTING AREA</span>
         </div>
       </div>

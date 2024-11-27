@@ -19,14 +19,14 @@ const ThirdSection: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center pb-10 mt-20">
+    <div className="flex flex-col items-center pb-20 pt-20 bg-customBg">
       {/* Buttons container */}
       <div className="flex gap-4 mb-8 w-full max-w-[1385px]">
         {Object.keys(apartmentImages).map((style) => (
           <button
             key={style}
             onClick={() => handleButtonClick(style as 'Studio' | 'OneBedroom' | 'TwoBedroom' | 'Townhouse')}
-            className={`flex-1 px-5 py-4 text-md rounded transition-all duration-300 ${selectedStyle === style ? 'bg-customBg text-black' : 'bg-none text-black hover:bg-customBg'}`}
+            className={`flex-1 px-5 py-4 text-md rounded transition-all font-mono duration-300 ${selectedStyle === style ? 'bg-customText2 text-black' : 'bg-none text-white hover:text-black hover:bg-customText2'}`}
           >
             {style.replace(/([A-Z])/g, ' $1').trim()} {/* Format button text */}
           </button>
@@ -34,7 +34,7 @@ const ThirdSection: React.FC = () => {
       </div>
 
       {/* Images container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 w-full px-5 sm:px-10 lg:px-64">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 w-full px-5 sm:px-10 lg:px-64 pb-20">
         {apartmentImages[selectedStyle].map((imageSrc, index) => (
           <div key={index} className="flex justify-center w-full">
             <Image

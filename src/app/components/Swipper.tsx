@@ -5,13 +5,14 @@ import Image from 'next/image'; // Ensure Image is imported from Next.js
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import './swiper.css'
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import reef from '../assets/algedra.avif'
 
 const Swipper: React.FC = () => {
   return (
-    <div className='my-20'>
+    <div className='py-20 bg-customText2'>
       <Swiper
         effect="coverflow"
         grabCursor={true}
@@ -35,8 +36,8 @@ const Swipper: React.FC = () => {
           <Image
             src={reef} // Ensure this path is correct
             alt="1 slide"
-            width={500} // You need to specify width and height for the image
-            height={300}
+            width={700} // You need to specify width and height for the image
+            height={700}
           />
         </SwiperSlide>
 
@@ -44,27 +45,26 @@ const Swipper: React.FC = () => {
         <SwiperSlide>
           <Image
             src={reef} // Ensure this path is correct
-            alt="2 slide"
-            width={500}
-            height={300}
+            alt="1 slide"
+            width={700} // You need to specify width and height for the image
+            height={700}
           />
         </SwiperSlide>
 
         <SwiperSlide>
           <Image
             src={reef} // Ensure this path is correct
-            alt="2 slide"
-            width={500}
-            height={300}
+            alt="1 slide"
+            width={700} // You need to specify width and height for the image
+            height={700}
           />
         </SwiperSlide>
-
         <SwiperSlide>
           <Image
             src={reef} // Ensure this path is correct
-            alt="2 slide"
-            width={500}
-            height={300}
+            alt="1 slide"
+            width={700} // You need to specify width and height for the image
+            height={700}
           />
         </SwiperSlide>
 

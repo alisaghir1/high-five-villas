@@ -5,6 +5,9 @@ import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
 import FourthSection from "./FourthSection";
 import FifthSection from "./FifthSection";
+import Form from "./components/Form";
+import WhyUs from "./WhyUs";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
     <ThirdSection />
     <FourthSection />
     <FifthSection />
+    <Form />
+    <WhyUs />
+    <Footer />
     </>
   );
 }

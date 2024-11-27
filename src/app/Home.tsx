@@ -1,6 +1,10 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import reef from './assets/algedra.avif'
+import Typewriter from 'typewriter-effect';
+
+
 
 const Home:React.FC = () => {
   return (
@@ -11,9 +15,24 @@ const Home:React.FC = () => {
     </div>
     
     <div className="relative z-10 flex flex-col justify-center items-center h-full text-center mx-2">
-      <h1 className="text-5xl font-bold leading-tight mb-4">Welcome to <span className='text-customText'>High Five</span>  Properties</h1>
-      <p className="text-lg text-gray-300 mb-8">Your trusted partner in the dynamic world of real estate.</p>
-      <a href="#" className="bg-customBg text-gray-900 hover:bg-white py-2 px-6 rounded-md text-md md:text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Register Your Intereset</a>
+      <h1 className="text-5xl font-bold leading-tight mb-4 custom-font ">Welcome to <span className='text-customText '>High Five</span>  Properties</h1>
+      <p className="text-lg text-gray-300 mb-8 font-mono">
+          <Typewriter
+            options={{
+              strings: [
+                'Discover your dream home with High Five Properties, where luxury meets comfort',
+                'Your trusted partner in real estate.',
+                'Explore luxury homes and apartments.',
+                'Making your real estate dreams come true.',
+                'Join us in exploring the finest selection of real estate that matches your vision.',
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 75,
+            }}
+          />
+        </p>
+      <a href="#Form" className="bg-customText font-mono text-white hover:bg-white hover:text-black py-2 px-6 rounded-md text-md md:text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Register Your Intereset</a>
     </div>
   </div>
   
