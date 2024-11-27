@@ -21,7 +21,7 @@ const ThirdSection: React.FC = () => {
   return (
     <div className="flex flex-col items-center pb-10 mt-20">
       {/* Buttons container */}
-      <div className="flex gap-4 mb-8 w-full max-w-[1200px]">
+      <div className="flex gap-4 mb-8 w-full max-w-[1385px]">
         {Object.keys(apartmentImages).map((style) => (
           <button
             key={style}
