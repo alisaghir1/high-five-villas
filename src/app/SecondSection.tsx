@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const SecondSection: React.FC = () => {
   return (
-    <div className='bg-white flex flex-col items-center justify-center gap-10 py-8'>
+    <div className='bg-white flex flex-col items-center justify-center gap-10 pb-8'>
       <div className="text-center mx-2">
         <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white pb-4">
         Introducing the Innovative Climate-Controlled Sunken Garden

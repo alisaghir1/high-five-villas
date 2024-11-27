@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import HomeComp from "./Home";
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
+import ThirdSection from "./ThirdSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
     <HomeComp />
     <FirstSection />
     <SecondSection />
+    <ThirdSection />
     </>
   );
 }
