@@ -44,7 +44,7 @@ const ThirdSection: React.FC = () => {
           <button
             key={style}
             onClick={() => handleButtonClick(style as 'Studio' | 'OneBedroom' | 'TwoBedroom' | 'Townhouse')}
-            className={`flex-1 px-5 py-4 text-md rounded transition-all font-mono duration-300 ${selectedStyle === style ? 'bg-customText2 text-black' : 'bg-none text-white hover:text-black hover:bg-customText2'}`}
+            className={`flex-1 px-5 py-4 text-md lg:rounded-xl transition-all font-mono duration-300 ${selectedStyle === style ? 'bg-customText2 text-black' : 'bg-none text-white hover:text-black hover:bg-customText2'}`}
           >
             {style.replace(/([A-Z])/g, ' $1').trim()} {/* Format button text */}
           </button>
