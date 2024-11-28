@@ -3,7 +3,7 @@ import Swipper from "./components/Swipper";
 
 const FifthSection: React.FC = () => {
   return (
-    <div className="bg-customText2">
+    <section className="bg-customText2">
       <div className="text-center mx-2 py-20 ">
         <h2 className="text-2xl font-bold text-customBg lg:text-3xl pb-4 custom-font">
           ELEGANCE
@@ -13,7 +13,7 @@ const FifthSection: React.FC = () => {
         </p>
       </div>
       <Swipper />
-    </div>
+    </section>
   );
 };
 

@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 interface FormData {
   firstName?: string;
@@ -56,14 +56,14 @@ const Form: React.FC = () => {
   // Handle form submission and send email via EmailJS
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);  // Show loader
+    setLoading(true); // Show loader
 
     try {
       await emailjs.send(
-        'service_tgdvry2',
-        'template_n4traqr',
+        "service_tgdvry2",
+        "template_n4traqr",
         prepareEmailData(),
-        'bz-racFIdw40qpvrn'
+        "bz-racFIdw40qpvrn"
       );
 
       setFormData({
@@ -83,7 +83,7 @@ const Form: React.FC = () => {
       setShowAlert(true);
       console.error("FAILED...", error);
     } finally {
-      setLoading(false);  // Hide loader
+      setLoading(false); // Hide loader
     }
   };
 
@@ -226,7 +226,7 @@ const Form: React.FC = () => {
 
         <button
           type="submit"
-          disabled={loading}  // Disable the button while loading
+          disabled={loading} // Disable the button while loading
           className="mt-10 px-6 py-2.5 w-full text-lg bg-customBg text-white transition 300 ease-in-out hover:bg-white hover:text-black rounded-sm"
         >
           {loading ? (
@@ -251,64 +251,68 @@ const Form: React.FC = () => {
         </div>
       )}
 
-<style jsx>{`
-  .spinner {
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid #3498db;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    animation: spin 2s linear infinite;
-  }
+      <style jsx>{`
+        .spinner {
+          border: 3px solid #f3f3f3;
+          border-top: 3px solid #3498db;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          animation: spin 2s linear infinite;
+        }
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
 
-  .alert-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #E5E0DA;
-    z-index: 1000;
-  }
+        .alert-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #e5e0da;
+          z-index: 1000;
+        }
 
-  .alert-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    color: #453C35;  
-  }
+        .alert-box {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          max-width: 400px;
+          width: 90%;
+          color: #453c35;
+        }
 
-  .alert-text {
-    color: #453C35;  /* Same color as the close button */
-  }
+        .alert-text {
+          color: #453c35; /* Same color as the close button */
+        }
 
-  .alert-close {
-    background-color: #453C35;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
+        .alert-close {
+          background-color: #453c35;
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-top: 10px;
+        }
 
-  .alert-close:hover {
-    background-color: #E5E0DA;
-    color: black;
-  }
-`}</style>
+        .alert-close:hover {
+          background-color: #e5e0da;
+          color: black;
+        }
+      `}</style>
     </div>
   );
 };
