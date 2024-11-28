@@ -220,7 +220,7 @@ const Form: React.FC = () => {
               id="consent"
               checked={isChecked}
               onChange={handleCheckboxChange}
-              className="mr-2 mt-2"
+              className="mr-2 w-8 h-8 bg-customBg"
               required
             />
             <label htmlFor="consent" className="text-lg text-customBg">
