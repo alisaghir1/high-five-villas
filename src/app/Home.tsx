@@ -13,11 +13,11 @@ const Home: React.FC = () => {
           alt="Background Image"
           className="object-cover object-center w-full h-full"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
       </div>
 
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center mx-2">
-        <h1 className="text-5xl font-bold leading-tight mb-4 custom-font ">
+        <h1 className="text-5xl leading-tight mb-4 custom-font ">
           Welcome to <span className="text-customText ">High Five</span>{" "}
           Properties
         </h1>
