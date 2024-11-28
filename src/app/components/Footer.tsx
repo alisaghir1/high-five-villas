@@ -4,7 +4,7 @@ import logo from '../assets/logo.svg'
 
 const Footer:React.FC = () => {
   return (
-    <footer className="bg-white font-mono">
+    <footer className="bg-gray font-mono">
   <div className="container px-4 mx-auto">
     <div className="pt-24 pb-11 mx-auto max-w-4xl"><a className="block md:mx-auto mb-5 max-w-max" href="#">
         <Image src={logo} alt='logo' className='p-5' />

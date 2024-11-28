@@ -104,31 +104,31 @@ const FourthSection: React.FC = () => {
       {/* Grid container */}
       <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-20 lg:mx-20">
         {/* Icon 1 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
           <MdHolidayVillage className="fa fa-home text-7xl text-customText2" />
           <span>GUEST VILLA</span>
         </div>
 
         {/* Icon 2 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <IoFlowerSharp className="fa fa-home text-7xl text-customText2" />
           <span>PRIVATE GARDEN</span>
         </div>
 
         {/* Icon 3 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <MdEventSeat className="fa fa-home text-7xl text-customText2" />
           <span>SUNKEN SEATS</span>
         </div>
 
         {/* Icon 4 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GrYoga className="fa fa-home text-7xl text-customText2" />
           <span>YOGA AREAS</span>
         </div>
 
         {/* Icon 5 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GiFruitTree  className="fa fa-home text-7xl text-customText2" />
           <span>VEGETABLE GARDEN</span>
         </div>
@@ -140,114 +140,114 @@ const FourthSection: React.FC = () => {
         </div>
 
         {/* Icon 7 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GiRoundTable className="fa fa-home text-7xl text-customText2" />
           <span>CO-WORKING SPACE</span>
         </div>
 
         {/* Icon 8 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <TbMeat  className="fa fa-home text-7xl text-customText2" />
           <span>4X BBQ AREA</span>
         </div>
 
         {/* Icon 9 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <MdOutlineSportsCricket className="fa fa-home text-7xl text-customText2" />
           <span>CRICKET PITCH</span>
         </div>
 
         {/* Icon 10 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
           <MdSportsHockey className="fa fa-home text-7xl text-customText2" />
           <span>CROSSFIT AREA</span>
         </div>
 
         {/* Icon 11 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
           <MdOutlineDeck className="fa fa-home text-7xl text-customText2" />
           <span>DECKING AREA</span>
         </div>
 
         {/* Icon 12 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <CgGym  className="fa fa-home text-7xl text-customText2" />
           <span>INDOOR GYM</span>
         </div>
 
         {/* Icon 13 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <RiBikeFill className="fa fa-home text-7xl text-customText2" />
           <span>AQUA BIKE</span>
         </div>
 
         {/* Icon 14 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
           <TbPool className="fa fa-home text-7xl text-customText2" />
           <span>JACUZZI</span>
         </div>
 
         {/* Icon 15 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <FaPersonRunning className="fa fa-home text-7xl text-customText2" />
           <span>JOGGING TRACK</span>
         </div>
 
         {/* Icon 16 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GiKidSlide  className="fa fa-home text-7xl text-customText2" />
           <span>KIDS PLAY AREA</span>
         </div>
 
         {/* Icon 17 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GiTennisCourt className="fa fa-home text-7xl text-customText2" />
           <span>MULTIPURPOSE COURT</span>
         </div>
 
         {/* Icon 18 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <PiProjectorScreenChartLight className="fa fa-home text-7xl text-customText2" />
           <span>ROOFTOP CINEMA</span>
         </div>
 
         {/* Icon 19 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GiWeightLiftingUp className="fa fa-home text-7xl text-customText2" />
           <span>OUTDOOR GYM</span>
         </div>
         {/* Icon 20 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <MdOutlinePool className="fa fa-home text-7xl text-customText2" />
           <span>SWIMMING POOL</span>
         </div>
 
         {/* Icon 21 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <FaTableTennis className="fa fa-home text-7xl text-customText2" />
           <span>PICKLE BALL</span>
         </div>
 
         {/* Icon 22 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <MdOutlineLocalLaundryService className="fa fa-home text-7xl text-customText2" />
           <span>HIGH-END LAUNDARY SERVICE</span>
         </div>
 
         {/* Icon 23 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
           <GrLounge className="fa fa-home text-7xl text-customText2" />
           <span>LOUNGE SEATING</span>
         </div>
 
         {/* Icon 24 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <GiWaterPolo className="fa fa-home text-7xl text-customText2" />
           <span>EXERCISE POOL</span>
         </div>
 
         {/* Icon 25 */}
-        <div className="flex flex-col justify-center items-center p-4 rounded-lg">
+        <div className="flex flex-col justify-center items-center p-4 rounded-lg text-center">
         <PiChairThin className="fa fa-home text-7xl text-customText2" />
           <span>SITTING AREA</span>
         </div>
