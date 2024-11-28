@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import reef from './assets/algedra.avif'
 import { MdHolidayVillage } from "react-icons/md";
 import { IoFlowerSharp } from "react-icons/io5";
 import { MdEventSeat } from "react-icons/md";
@@ -26,6 +25,19 @@ import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { GrLounge } from "react-icons/gr";
 import { GiWaterPolo } from "react-icons/gi";
 import { PiChairThin } from "react-icons/pi";
+import section2 from './assets/section5.jpeg'
+import a1 from './assets/amenities/a1.jpg'
+import a2 from './assets/amenities/a2.png'
+import a3 from './assets/amenities/a3.jpeg'
+import a4 from './assets/amenities/a4.png'
+import a5 from './assets/amenities/a5.png'
+import a6 from './assets/amenities/a6.jpg'
+
+
+
+
+
+
 
 
 
@@ -47,7 +59,9 @@ import { PiChairThin } from "react-icons/pi";
 const FourthSection: React.FC = () => {
   return (
     <div className=' flex flex-col items-center justify-center gap-10 pb-20 bg-customBg'>
-      <Image className='w-full h-screen object-cover' src={reef} alt="reef pic" />
+     <div className="relative w-full h-screen">
+        <Image src={section2} alt='section 2 pic' className="w-full h-full object-cover"/>
+      </div>
       
       <div className="text-center mx-2">
         <h2 className="text-2xl font-bold text-white lg:text-3xl pb-4 mt-10 custom-font">
@@ -62,19 +76,19 @@ const FourthSection: React.FC = () => {
         {/* Image 1 */}
         <Image 
           className='w-full sm:w-1/3 md:w-1/3 lg:w-1/3 h-[300px] sm:h-[400px] rounded-lg transition-transform transform hover:scale-105' 
-          src={reef} 
+          src={a1} 
           alt="reef pic 1" 
         />
         {/* Image 2 */}
         <Image 
           className='w-full sm:w-1/3 md:w-1/3 lg:w-1/3 h-[300px] sm:h-[400px] rounded-lg transition-transform transform hover:scale-105' 
-          src={reef} 
+          src={a2} 
           alt="reef pic 2" 
         />
         {/* Image 3 */}
         <Image 
           className='w-full sm:w-1/3 md:w-1/3 lg:w-1/3 h-[300px] sm:h-[400px] rounded-lg transition-transform transform hover:scale-105' 
-          src={reef} 
+          src={a3} 
           alt="reef pic 3" 
         />
       </div>
@@ -243,14 +257,14 @@ const FourthSection: React.FC = () => {
     <figure className="relative w-full h-60">
       <Image
         className="w-full h-full absolute top-0 start-0 object-cover rounded-xl transform transition-all duration-300 hover:opacity-80"
-        src={reef}
+        src={a4}
         alt="Image Description"
       />
     </figure>
     <figure className="relative w-full h-60">
       <Image
         className="w-full h-full absolute top-0 start-0 object-cover rounded-xl transform transition-all duration-300 hover:opacity-80"
-        src={reef}
+        src={a5}
         alt="Image Description"
       />
     </figure>
@@ -258,7 +272,7 @@ const FourthSection: React.FC = () => {
   <figure className="relative w-full h-72 sm:h-96 lg:h-full">
     <Image
       className="w-full h-full absolute top-0 start-0 object-cover rounded-xl transform transition-all duration-300 hover:opacity-80"
-      src={reef}
+      src={a6}
       alt="Image Description"
     />
   </figure>

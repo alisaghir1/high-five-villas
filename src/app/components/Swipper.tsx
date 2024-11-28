@@ -1,77 +1,59 @@
 'use client'
 import React from 'react';
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image'; // Ensure Image is imported from Next.js
+
+// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import './swiper.css'
 
-import { EffectCoverflow, Pagination } from 'swiper/modules';
-import reef from '../assets/algedra.avif'
+import './swiper.css';
+import Image from 'next/image';
+import cr1 from '../assets/carousel1.jpeg'
+import cr2 from '../assets/carousel2.jpg'
+import cr3 from '../assets/carousel3.png'
+import cr4 from '../assets/carousel4.png'
+import cr5 from '../assets/carousel5.jpeg'
+import cr6 from '../assets/carousel6.jpeg'
 
-const Swipper: React.FC = () => {
+// import required modules
+import { FreeMode, Pagination } from 'swiper/modules';
+
+export default function App() {
   return (
-    <div className='py-20 bg-customText2'>
-      <Swiper
-        effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
+    <>
+<Swiper
+        slidesPerView={3} // Default setting for larger screens
+        spaceBetween={30} // Default space between slides
+        freeMode={true}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectCoverflow, Pagination]} // Ensure modules are imported correctly
+        modules={[FreeMode, Pagination]}
         className="mySwiper"
+        breakpoints={{
+          320: {
+            slidesPerView: 1, // 1 slide per view for small screens
+            spaceBetween: 10, // Smaller space between slides
+          },
+          768: {
+            slidesPerView: 2, // 2 slides per view for medium screens
+            spaceBetween: 20, // Medium space between slides
+          },
+          1024: {
+            slidesPerView: 3, // 3 slides per view for larger screens
+            spaceBetween: 30, // Larger space between slides
+          },
+        }}
       >
-        {/* Example Slide with Next.js Image */}
-        <SwiperSlide>
-          <Image
-            src={reef} // Ensure this path is correct
-            alt="1 slide"
-            width={700} // You need to specify width and height for the image
-            height={700}
-          />
-        </SwiperSlide>
-
-        {/* Example Slide */}
-        <SwiperSlide>
-          <Image
-            src={reef} // Ensure this path is correct
-            alt="1 slide"
-            width={700} // You need to specify width and height for the image
-            height={700}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            src={reef} // Ensure this path is correct
-            alt="1 slide"
-            width={700} // You need to specify width and height for the image
-            height={700}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={reef} // Ensure this path is correct
-            alt="1 slide"
-            width={700} // You need to specify width and height for the image
-            height={700}
-          />
-        </SwiperSlide>
-
-        {/* Add more slides as needed */}
+        <SwiperSlide><Image src={cr1} alt="slide 1"  /></SwiperSlide>
+        <SwiperSlide><Image src={cr2} alt="slide 2"  /></SwiperSlide>
+        <SwiperSlide><Image src={cr3} alt="slide 3"  /></SwiperSlide>
+        <SwiperSlide><Image src={cr4} alt="slide 4"  /></SwiperSlide>
+        <SwiperSlide><Image src={cr5} alt="slide 5"  /></SwiperSlide>
+        <SwiperSlide><Image src={cr6} alt="slide 6"  /></SwiperSlide>
       </Swiper>
-    </div>
+    </>
   );
-};
-
-export default Swipper;
+}

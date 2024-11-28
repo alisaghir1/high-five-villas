@@ -1,14 +1,32 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import reef from './assets/algedra.avif'; // Replace with actual paths
-import logo from './assets/logo.svg'; // Replace with actual paths
+import studio1 from './assets/studio/s1.jpg'
+import studio2 from './assets/studio/s2.jpg'
+import studio3 from './assets/studio/s3.jpg'
+import studio4 from './assets/studio/s4.jpg'
+import bedroom11 from './assets/1 bedroom/bd-1-1.jpg'
+import bedroom12 from './assets/1 bedroom/bd-1-2.jpg'
+import bedroom13 from './assets/1 bedroom/bd-1-3.jpg'
+import bedroom14 from './assets/1 bedroom/bd-1-4.jpg'
+import bedroom21 from './assets/2 bedrooms/bd2-1.jpg'
+import bedroom22 from './assets/2 bedrooms/bd2-2.jpg'
+import bedroom23 from './assets/2 bedrooms/bd2-3.jpg'
+import bedroom24 from './assets/2 bedrooms/bd2-4.jpg'
+import townhouse1 from './assets/Town House/th-1.jpg'
+import townhouse2 from './assets/Town House/th-2.jpg'
+import townhouse3 from './assets/Town House/th-3.jpg'
+import townhouse4 from './assets/Town House/th-4.jpg'
+
+
+
+
 
 const apartmentImages = {
-  Studio: [reef, reef, reef, reef],
-  OneBedroom: [logo, logo, logo, logo],
-  TwoBedroom: [logo, reef, logo,reef],
-  Townhouse: [reef, logo, logo, logo],
+  Studio: [studio1, studio2, studio3, studio4],
+  OneBedroom: [bedroom11, bedroom12, bedroom13, bedroom14],
+  TwoBedroom: [bedroom21, bedroom22, bedroom23,bedroom24],
+  Townhouse: [townhouse1, townhouse2, townhouse3, townhouse4],
 };
 
 const ThirdSection: React.FC = () => {
@@ -39,7 +57,7 @@ const ThirdSection: React.FC = () => {
           <div key={index} className="flex justify-center w-full">
             <Image
               alt={`${selectedStyle} pic ${index + 1}`}
-              className="hover:opacity-75 w-full h-auto transition-opacity duration-300"
+              className="hover:opacity-75 w-full h-96 transition-opacity duration-300"
               src={imageSrc}
               placeholder="blur" // For smooth loading effect
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY3JpcHQtY2FwYWJpbGlpdGllZXMiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPHBhdGggZD0iTTEwMCw2MEw1MiwxMDAgTDEwMCw2MCBNNTAsMjAgTDUsNCAiLz4KPC9zdmc+Cg==" // Base64 placeholder (simple SVG image)
