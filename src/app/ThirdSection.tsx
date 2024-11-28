@@ -60,7 +60,7 @@ const ThirdSection: React.FC = () => {
               className="hover:opacity-75 w-full h-96 transition-opacity duration-300"
               src={imageSrc}
               placeholder="blur" // For smooth loading effect
-              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY3JpcHQtY2FwYWJpbGlpdGllZXMiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPHBhdGggZD0iTTEwMCw2MEw1MiwxMDAgTDEwMCw2MCBNNTAsMjAgTDUsNCAiLz4KPC9zdmc+Cg==" // Base64 placeholder (simple SVG image)
+             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAAAAAEAAkAA...<base64string>"
             />
           </div>
         ))}

@@ -28,6 +28,9 @@ const Form: React.FC = () => {
   });
 
   const [isChecked, setIsChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [alertMessage, setAlertMessage] = useState<string>("");
+  const [showAlert, setShowAlert] = useState<boolean>(false);
 
   // Handle checkbox state change
   const handleCheckboxChange = () => {
@@ -53,6 +56,7 @@ const Form: React.FC = () => {
   // Handle form submission and send email via EmailJS
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);  // Show loader
 
     try {
       await emailjs.send(
@@ -61,8 +65,7 @@ const Form: React.FC = () => {
         prepareEmailData(),
         'bz-racFIdw40qpvrn'
       );
-      
-      console.log("SUCCESS!");
+
       setFormData({
         firstName: "",
         lastName: "",
@@ -73,18 +76,20 @@ const Form: React.FC = () => {
         buySoon: "",
         purpose: "",
       });
-      alert("SUCCESS! Your message has been sent.");
+      setAlertMessage("SUCCESS! Your message has been sent.");
+      setShowAlert(true);
     } catch (error) {
-      alert("FAILED! Something went wrong, please try again.");
+      setAlertMessage("FAILED! Something went wrong, please try again.");
+      setShowAlert(true);
       console.error("FAILED...", error);
+    } finally {
+      setLoading(false);  // Hide loader
     }
   };
 
   const handlePhoneChange = (value: string | undefined) => {
-    setFormData({ ...formData, phone: value || "" }); // Ensure the value is either a string or empty
+    setFormData({ ...formData, phone: value || "" });
   };
-
-
 
   return (
     <div id="Form" className="bg-customText2">
@@ -93,6 +98,7 @@ const Form: React.FC = () => {
           REGISTER YOUR INTEREST
         </h2>
       </div>
+
       <form
         ref={formRef}
         onSubmit={sendEmail}
@@ -126,14 +132,14 @@ const Form: React.FC = () => {
           </div>
 
           <div className="relative flex items-center">
-          <PhoneInput
-          required
-          international
-          defaultCountry="US"
-          value={formData.phone || undefined}
-          onChange={handlePhoneChange}
-          className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
-        />
+            <PhoneInput
+              required
+              international
+              defaultCountry="US"
+              value={formData.phone || undefined}
+              onChange={handlePhoneChange}
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
+            />
           </div>
 
           <div className="relative flex items-center">
@@ -160,19 +166,6 @@ const Form: React.FC = () => {
               }
               className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#bbb"
-              stroke="#bbb"
-              className="w-[18px] h-[18px] absolute right-2"
-              viewBox="0 0 682.667 682.667"
-            >
-              <defs>
-                <clipPath id="a" clipPathUnits="userSpaceOnUse">
-                  <path d="M0 512h512V0H0Z" data-original="#000000"></path>
-                </clipPath>
-              </defs>
-            </svg>
           </div>
 
           <div className="relative flex items-center sm:col-span-2">
@@ -233,11 +226,89 @@ const Form: React.FC = () => {
 
         <button
           type="submit"
+          disabled={loading}  // Disable the button while loading
           className="mt-10 px-6 py-2.5 w-full text-lg bg-customBg text-white transition 300 ease-in-out hover:bg-white hover:text-black rounded-sm"
         >
-          Submit
+          {loading ? (
+            <div className="flex justify-center items-center">
+              <div className="spinner"></div> {/* Spinner when loading */}
+            </div>
+          ) : (
+            "Submit"
+          )}
         </button>
       </form>
+
+      {/* Custom Alert */}
+      {showAlert && (
+        <div className="alert-container">
+          <div className="alert-box bg-customBg text-customText2">
+            <p>{alertMessage}</p>
+            <button onClick={() => setShowAlert(false)} className="alert-close">
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+<style jsx>{`
+  .spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .alert-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E5E0DA;
+    z-index: 1000;
+  }
+
+  .alert-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    color: #453C35;  
+  }
+
+  .alert-text {
+    color: #453C35;  /* Same color as the close button */
+  }
+
+  .alert-close {
+    background-color: #453C35;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .alert-close:hover {
+    background-color: #E5E0DA;
+    color: black;
+  }
+`}</style>
     </div>
   );
 };
