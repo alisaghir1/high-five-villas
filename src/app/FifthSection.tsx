@@ -8,7 +8,7 @@ const FifthSection: React.FC = () => {
         <h2 className="text-2xl font-bold text-customBg lg:text-3xl pb-4 custom-font">
           ELEGANCE
         </h2>
-        <p className="max-w-screen-sm black dark:text-gray-300 md:block mx-auto font-mono">
+        <p className="max-w-screen-sm black md:block mx-auto font-mono">
         At High Five Properties, we provide unparalleled elegance by seamlessly blending luxury, sophisticated design, and timeless style, ensuring each of our properties offers an exceptional living experience.
         </p>
       </div>

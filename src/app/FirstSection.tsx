@@ -7,7 +7,7 @@ import townhouse from './assets/Town House/th-5.jpg'
 
 const FirstSection:React.FC = () => {
   return (
-    <div className="bg-customBg dark:bg-gray-800 h-full pt-20">
+    <div className="bg-customBg h-full pt-20">
     <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <div className="flex items-center justify-between gap-8 mb-10">
             <div className="flex items-center gap-12">
@@ -20,8 +20,8 @@ const FirstSection:React.FC = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-            <a href="#"
-                className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+            <div
+                className="group relative flex h-48 items-end overflow-hidden rounded-lg shadow-lg md:h-80">
                 <Image src={studio} loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110" />
 
                 <div
@@ -29,9 +29,9 @@ const FirstSection:React.FC = () => {
                 </div>
 
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-mono">Studio</span>
-            </a>
+            </div>
 
-            <a href="#"
+            <div
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                 <Image src={bedroom1} loading="lazy" alt="Photo by Magicle" className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110" />
 
@@ -40,9 +40,9 @@ const FirstSection:React.FC = () => {
                 </div>
 
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-mono">1 Bedroom</span>
-            </a>
+            </div>
 
-            <a href="#"
+            <div
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                 <Image src={bedroom2} loading="lazy" alt="Photo by Martin Sanchez" className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110" />
 
@@ -51,9 +51,9 @@ const FirstSection:React.FC = () => {
                 </div>
 
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-mono">2 Bedrooms</span>
-            </a>
+            </div>
 
-            <a href="#"
+            <div
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                 <Image src={townhouse} loading="lazy" alt="Photo by Lorenzo Herrera" className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110" />
 
@@ -62,7 +62,7 @@ const FirstSection:React.FC = () => {
                 </div>
 
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-mono">Town House</span>
-            </a>
+            </div>
 
         </div>
         
