@@ -28,3 +28,10 @@ html {
 .custom-font{
   font-family: 'Merienda', Arial, Helvetica, sans-serif;
 }
+
+.PhoneInput input {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}

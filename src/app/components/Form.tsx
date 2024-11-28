@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 interface FormData {
   firstName?: string;
@@ -59,7 +61,7 @@ const Form: React.FC = () => {
         prepareEmailData(),
         'bz-racFIdw40qpvrn'
       );
-
+      
       console.log("SUCCESS!");
       setFormData({
         firstName: "",
@@ -71,10 +73,18 @@ const Form: React.FC = () => {
         buySoon: "",
         purpose: "",
       });
+      alert("SUCCESS! Your message has been sent.");
     } catch (error) {
+      alert("FAILED! Something went wrong, please try again.");
       console.error("FAILED...", error);
     }
   };
+
+  const handlePhoneChange = (value: string | undefined) => {
+    setFormData({ ...formData, phone: value || "" }); // Ensure the value is either a string or empty
+  };
+
+
 
   return (
     <div id="Form" className="bg-customText2">
@@ -91,61 +101,64 @@ const Form: React.FC = () => {
         <div className="grid sm:grid-cols-2 gap-6">
           <div className="relative flex items-center">
             <input
+              required
               type="text"
               placeholder="FIRST NAME"
               value={formData.firstName}
               onChange={(e) =>
                 setFormData({ ...formData, firstName: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
           </div>
 
           <div className="relative flex items-center">
             <input
+              required
               type="text"
               placeholder="LAST NAME"
               value={formData.lastName}
               onChange={(e) =>
                 setFormData({ ...formData, lastName: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
           </div>
 
           <div className="relative flex items-center">
-            <input
-              type="number"
-              placeholder="PHONE NO."
-              value={formData.phone}
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
-            />
+          <PhoneInput
+          required
+          international
+          defaultCountry="US"
+          value={formData.phone || undefined}
+          onChange={handlePhoneChange}
+          className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
+        />
           </div>
 
           <div className="relative flex items-center">
             <input
+              required
               type="text"
               placeholder="COUNTRY OF RESIDENCE"
               value={formData.country}
               onChange={(e) =>
                 setFormData({ ...formData, country: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
           </div>
 
           <div className="relative flex items-center sm:col-span-2">
             <input
+              required
               type="email"
               placeholder="EMAIL"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -164,37 +177,40 @@ const Form: React.FC = () => {
 
           <div className="relative flex items-center sm:col-span-2">
             <input
+              required
               type="text"
               placeholder="NUMBER OF BEDROOMS"
               value={formData.bedrooms}
               onChange={(e) =>
                 setFormData({ ...formData, bedrooms: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
           </div>
 
           <div className="relative flex items-center sm:col-span-2">
             <input
+              required
               type="text"
               placeholder="HOW SOON ARE YOU LOOKING TO BUY"
               value={formData.buySoon}
               onChange={(e) =>
                 setFormData({ ...formData, buySoon: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
           </div>
 
           <div className="relative flex items-center sm:col-span-2">
             <input
+              required
               type="text"
               placeholder="PURPOSE OF BUYING"
               value={formData.purpose}
               onChange={(e) =>
                 setFormData({ ...formData, purpose: e.target.value })
               }
-              className="px-2 py-6 bg-transparent text-black w-full text-sm border-b-2 border-customText focus:border-customBg outline-none"
+              className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
             />
           </div>
 
@@ -204,9 +220,10 @@ const Form: React.FC = () => {
               id="consent"
               checked={isChecked}
               onChange={handleCheckboxChange}
-              className="mr-2 mt-1"
+              className="mr-2 mt-2"
+              required
             />
-            <label htmlFor="consent" className="text-sm text-customBg">
+            <label htmlFor="consent" className="text-lg text-customBg">
               By accepting and providing my personal information, I am
               consenting to High Five Properties Privacy Policy, as well as the
               applicable data protection laws.
@@ -216,7 +233,7 @@ const Form: React.FC = () => {
 
         <button
           type="submit"
-          className="mt-10 px-6 py-2.5 w-full text-sm bg-customBg text-white transition 300 ease-in-out hover:bg-white hover:text-black rounded-sm"
+          className="mt-10 px-6 py-2.5 w-full text-lg bg-customBg text-white transition 300 ease-in-out hover:bg-white hover:text-black rounded-sm"
         >
           Submit
         </button>
