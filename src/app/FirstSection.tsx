@@ -12,13 +12,11 @@ const FirstSection: React.FC = () => {
         <div className="flex items-center justify-between gap-8 mb-10">
           <div className="flex items-center gap-12">
             <h2 className="text-2xl font-bold text-white lg:text-3x custom-font">
-              Our Property Gallery
+            Our Villa Gallery
             </h2>
 
             <p className="hidden max-w-screen-sm text-customText2 md:block font-mono">
-              Explore our curated selection of properties across different
-              categories. Whether you are looking for your dream home or
-              commercial space, we have something for every need.
+            Explore our curated selection of luxurious villas across different categories. Whether you are searching for a cozy retreat or an expansive estate, we have the perfect villa for every lifestyle.
             </p>
           </div>
         </div>

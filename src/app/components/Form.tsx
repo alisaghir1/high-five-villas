@@ -218,7 +218,7 @@ const Form: React.FC = () => {
             />
             <label htmlFor="consent" className="text-lg text-customBg">
               By accepting and providing my personal information, I am
-              consenting to High Five Properties Privacy Policy, as well as the
+              consenting to High Five Villas Privacy Policy, as well as the
               applicable data protection laws.
             </label>
           </div>

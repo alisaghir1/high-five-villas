@@ -9,7 +9,7 @@ const FifthSection: React.FC = () => {
           ELEGANCE
         </h2>
         <p className="max-w-screen-sm black md:block mx-auto font-mono">
-        At High Five Properties, we provide unparalleled elegance by seamlessly blending luxury, sophisticated design, and timeless style, ensuring each of our properties offers an exceptional living experience.
+        At High Five Villas, we provide unparalleled elegance by seamlessly blending luxury, sophisticated design, and timeless style, ensuring each of our properties offers an exceptional living experience.
         </p>
       </div>
       <Swipper />

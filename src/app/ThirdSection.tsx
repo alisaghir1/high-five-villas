@@ -20,20 +20,20 @@ import townhouse4 from "./assets/Town House/th-4.jpg";
 
 
 
-const apartmentImages = {
-  Studio: [studio1, studio2, studio3, studio4],
-  OneBedroom: [bedroom11, bedroom12, bedroom13, bedroom14],
-  TwoBedroom: [bedroom21, bedroom22, bedroom23, bedroom24],
-  Townhouse: [townhouse1, townhouse2, townhouse3, townhouse4],
+const villaImages = {
+  VillaInteriors: [studio1, studio2, studio3, studio4],
+  VillaExteriors: [bedroom11, bedroom12, bedroom13, bedroom14],
+  VillasAmenities: [bedroom21, bedroom22, bedroom23, bedroom24],
+  VillasLocations: [townhouse1, townhouse2, townhouse3, townhouse4],
 };
 
 const ThirdSection: React.FC = () => {
   const [selectedStyle, setSelectedStyle] = useState<
-    "Studio" | "OneBedroom" | "TwoBedroom" | "Townhouse"
-  >("Studio");
+    "VillaInteriors" | "VillaExteriors" | "VillasAmenities" | "VillasLocations"
+  >("VillaInteriors");
 
   const handleButtonClick = (
-    style: "Studio" | "OneBedroom" | "TwoBedroom" | "Townhouse"
+    style: "VillaInteriors" | "VillaExteriors" | "VillasAmenities" | "VillasLocations"
   ) => {
     setSelectedStyle(style);
   };
@@ -42,12 +42,12 @@ const ThirdSection: React.FC = () => {
     <section className="flex flex-col items-center pb-20 pt-20 bg-customBg">
       {/* Buttons container */}
       <div className="flex flex-col lg:flex-row gap-4 mb-8 w-full max-w-[1385px]">
-        {Object.keys(apartmentImages).map((style) => (
+        {Object.keys(villaImages).map((style) => (
           <button
             key={style}
             onClick={() =>
               handleButtonClick(
-                style as "Studio" | "OneBedroom" | "TwoBedroom" | "Townhouse"
+                style as "VillaInteriors" | "VillaExteriors" | "VillasAmenities" | "VillasLocations"
               )
             }
             className={`flex-1 px-5 py-4 text-md lg:rounded-xl transition-all font-mono duration-300 ${
@@ -56,14 +56,14 @@ const ThirdSection: React.FC = () => {
                 : "bg-none text-white hover:text-black hover:bg-customText2"
             }`}
           >
-            {style.replace(/([A-Z])/g, " $1").trim()} {/* Format button text */}
+            {style.replace(/([A-Z])/g, " $1").trim().replace("Villa", " Villa")} {/* Format button text */}
           </button>
         ))}
       </div>
 
       {/* Images container */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 w-full px-5 sm:px-10 lg:px-64 pb-20">
-        {apartmentImages[selectedStyle].map((imageSrc, index) => (
+        {villaImages[selectedStyle].map((imageSrc, index) => (
           <div key={index} className="flex justify-center w-full">
             <Image
               alt={`${selectedStyle} pic ${index + 1}`}
