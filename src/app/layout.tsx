@@ -28,9 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-      <link rel="preload" href="https://properties.hi5properties.com/fonts/Korcy-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous"  />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
