@@ -5,7 +5,7 @@ const WhyUs: React.FC = () => {
     <section className="pb-40 bg-customText2 font-mono">
       <div className="text-center px-2 mb-20 bg-customBg py-20">
         <h2 className="text-2xl font-bold text-white lg:text-3x pb-4 custom-font">
-          Why Choose High Five Properties?
+          Find Out Why High Five Properties Stands Out
         </h2>
       </div>
       <div className="">

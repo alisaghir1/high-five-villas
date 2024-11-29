@@ -76,7 +76,7 @@ const Form: React.FC = () => {
         buySoon: "",
         purpose: "",
       });
-      setAlertMessage("SUCCESS! Your message has been sent.");
+      setAlertMessage("Thanks for Your Interest! Our Team Will Contact You Soon.");
       setShowAlert(true);
     } catch (error) {
       setAlertMessage("FAILED! Something went wrong, please try again.");
