@@ -15,6 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "High Five Properties",
+  description:'Discover your perfect home with Hi5 Properties, your trusted real estate partner. Explore a wide range of luxury properties, apartments, and homes designed to meet your lifestyle. Whether buying, renting, or selling, we make your real estate journey seamless and stress-free.',
   icons: {
     icon: "/logo.svg", // Replace with the path to your logo image in the public folder
   },
