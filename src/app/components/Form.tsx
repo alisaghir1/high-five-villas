@@ -76,7 +76,7 @@ const Form: React.FC = () => {
         buySoon: "",
         purpose: "",
       });
-      setAlertMessage("Thanks for Your Interest! Our Team Will Contact You Soon.");
+      setAlertMessage("Thanks for you interest! our team will contact you soon.");
       setShowAlert(true);
     } catch (error) {
       setAlertMessage("FAILED! Something went wrong, please try again.");
@@ -135,7 +135,7 @@ const Form: React.FC = () => {
             <PhoneInput
               required
               international
-              defaultCountry="US"
+              defaultCountry="AE"
               value={formData.phone || undefined}
               onChange={handlePhoneChange}
               className="px-2 py-6 bg-transparent text-black w-full text-lg border-b-2 border-customText focus:border-customBg outline-none"
