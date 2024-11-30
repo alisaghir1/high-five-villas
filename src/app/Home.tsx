@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center mx-2">
         <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight mb-4 custom-font">
-          Find Your Perfect Villa with <span className="text-customText">High Five</span>
+        Book your <span className="text-customText">villa</span> with installement today
         </h1>
         <div className="text-lg text-gray-300 mb-8 font-mono">
           <Typewriter
