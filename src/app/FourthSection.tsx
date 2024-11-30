@@ -25,21 +25,21 @@ import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { GrLounge } from "react-icons/gr";
 import { GiWaterPolo } from "react-icons/gi";
 import { PiChairThin } from "react-icons/pi";
-import section2 from "./assets/section5.jpeg";
-import a1 from "./assets/amenities/a1.jpg";
-import a2 from "./assets/amenities/a2.png";
-import a3 from "./assets/amenities/a3.jpeg";
-import a4 from "./assets/amenities/a4.png";
-import a5 from "./assets/amenities/a5.png";
-import a6 from "./assets/amenities/a6.jpg";
+import section3 from "./assets/section3.jpeg";
+import a1 from "./assets/amenities/amenities1.jpeg";
+import a2 from "./assets/amenities/amenities2.jpeg";
+import a3 from "./assets/amenities/amenities3.jpeg";
+import a4 from "./assets/amenities/amenities4.jpeg";
+import a5 from "./assets/amenities/amenities5.jpeg";
+import a6 from "./assets/amenities/amenities7.png";
 
 const FourthSection: React.FC = () => {
   return (
     <section className=" flex flex-col items-center justify-center gap-10 pb-20 bg-customBg">
       <div className="relative w-full h-screen">
         <Image
-          src={section2}
-          alt="section 2 pic"
+          src={section3}
+          alt="section 3 pic"
           className="w-full h-full object-cover"
         />
       </div>

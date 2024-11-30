@@ -1,39 +1,40 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import studio1 from "./assets/studio/s1.jpg";
-import studio2 from "./assets/studio/s2.jpg";
-import studio3 from "./assets/studio/s3.jpg";
-import studio4 from "./assets/studio/s4.jpg";
-import bedroom11 from "./assets/1 bedroom/bd-1-1.jpg";
-import bedroom12 from "./assets/1 bedroom/bd-1-2.jpg";
-import bedroom13 from "./assets/1 bedroom/bd-1-3.jpg";
-import bedroom14 from "./assets/1 bedroom/bd-1-4.jpg";
+import exterior1 from './assets/villa exterior/villaEx1.jpeg'
+import exterior2 from './assets/villa exterior/villaEx5.jpeg'
+import exterior3 from './assets/villa exterior/villaEx2.jpeg'
+import exterior4 from './assets/section2.jpg'
+import twobd1 from './assets/two bedrooms/2bd-1.jpeg'
+import twobd2 from './assets/two bedrooms/2bd-2.jpeg'
+import twobd3 from './assets/two bedrooms/2bd-3.jpg'
+import twobd4 from './assets/two bedrooms/2bd-4.jpg'
 import bedroom21 from "./assets/2 bedrooms/bd2-1.jpg";
 import bedroom22 from "./assets/2 bedrooms/bd2-2.jpg";
 import bedroom23 from "./assets/2 bedrooms/bd2-3.jpg";
 import bedroom24 from "./assets/2 bedrooms/bd2-4.jpg";
-import townhouse1 from "./assets/Town House/th-1.jpg";
-import townhouse2 from "./assets/Town House/th-2.jpg";
-import townhouse3 from "./assets/Town House/th-3.jpg";
-import townhouse4 from "./assets/Town House/th-4.jpg";
+import fourbd1 from './assets/four bedrooms/4bd-1.jpeg'
+import fourbd2 from './assets/four bedrooms/4bd-2.jpeg'
+import fourbd3 from './assets/four bedrooms/4bd-3.jpg'
+import fourbd4 from './assets/four bedrooms/4bd-4.jpg'
+
 
 
 
 const villaImages = {
-  VillaInteriors: [studio1, studio2, studio3, studio4],
-  VillaExteriors: [bedroom11, bedroom12, bedroom13, bedroom14],
-  VillasAmenities: [bedroom21, bedroom22, bedroom23, bedroom24],
-  VillasLocations: [townhouse1, townhouse2, townhouse3, townhouse4],
+  VillaExteriors: [exterior1, exterior2, exterior3, exterior4],
+  TwoBedroomsVilla: [twobd1, twobd2, twobd3, twobd4],
+  ThreeBedroomsVilla: [bedroom21, bedroom22, bedroom23, bedroom24],
+  FourToSixBedroomsVilla: [fourbd1, fourbd2, fourbd3, fourbd4],
 };
 
 const ThirdSection: React.FC = () => {
   const [selectedStyle, setSelectedStyle] = useState<
-    "VillaInteriors" | "VillaExteriors" | "VillasAmenities" | "VillasLocations"
-  >("VillaInteriors");
+    "VillaExteriors" | "TwoBedroomsVilla" |  "ThreeBedroomsVilla" | "FourToSixBedroomsVilla"
+  >("VillaExteriors");
 
   const handleButtonClick = (
-    style: "VillaInteriors" | "VillaExteriors" | "VillasAmenities" | "VillasLocations"
+    style: "VillaExteriors" | "TwoBedroomsVilla" |  "ThreeBedroomsVilla" | "FourToSixBedroomsVilla"
   ) => {
     setSelectedStyle(style);
   };
@@ -47,7 +48,7 @@ const ThirdSection: React.FC = () => {
             key={style}
             onClick={() =>
               handleButtonClick(
-                style as "VillaInteriors" | "VillaExteriors" | "VillasAmenities" | "VillasLocations"
+                style as "VillaExteriors" | "TwoBedroomsVilla" |  "ThreeBedroomsVilla" | "FourToSixBedroomsVilla"
               )
             }
             className={`flex-1 px-5 py-4 text-md lg:rounded-xl transition-all font-mono duration-300 ${
@@ -67,7 +68,7 @@ const ThirdSection: React.FC = () => {
           <div key={index} className="flex justify-center w-full">
             <Image
               alt={`${selectedStyle} pic ${index + 1}`}
-              className="hover:opacity-75 w-full h-96 transition-opacity duration-300"
+              className="hover:opacity-75 object-cover w-full h-96 transition-opacity duration-300"
               src={imageSrc}
               placeholder="blur" // For smooth loading effect
             />

@@ -11,11 +11,13 @@ import "swiper/css/pagination";
 import "./swiper.css";
 import Image from "next/image";
 import cr1 from "../assets/carousel1.jpeg";
-import cr2 from "../assets/carousel2.jpg";
-import cr3 from "../assets/carousel3.png";
-import cr4 from "../assets/carousel4.png";
+import cr2 from "../assets/amenities/amenities3.jpeg";
+import cr3 from "../assets/villa exterior/villaEx5.jpeg";
+import cr4 from "../assets/fourPlus.jpg";
 import cr5 from "../assets/carousel5.jpeg";
 import cr6 from "../assets/carousel6.jpeg";
+import cr7 from "../assets/home-villa.jpg";
+
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
@@ -64,6 +66,9 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           <Image src={cr6} alt="slide 6" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={cr7} alt="slide 7" />
         </SwiperSlide>
       </Swiper>
     </>

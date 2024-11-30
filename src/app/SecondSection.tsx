@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import section1 from "./assets/section1.jpeg";
+import section1 from "./assets/section2.jpg";
 
 const SecondSection: React.FC = () => {
   return (
