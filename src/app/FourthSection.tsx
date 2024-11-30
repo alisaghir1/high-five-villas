@@ -25,7 +25,7 @@ import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { GrLounge } from "react-icons/gr";
 import { GiWaterPolo } from "react-icons/gi";
 import { PiChairThin } from "react-icons/pi";
-import section3 from "./assets/section3.jpeg";
+import section3 from "./assets/section6.webp";
 import a1 from "./assets/amenities/amenities1.jpeg";
 import a2 from "./assets/amenities/amenities2.jpeg";
 import a3 from "./assets/amenities/amenities3.jpeg";
